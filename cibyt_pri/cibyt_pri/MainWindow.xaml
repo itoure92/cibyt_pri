@@ -1,0 +1,57 @@
+﻿<Window x:Class="cibyt_pri.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cibyt_pri"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+
+        <Storyboard x:Key="sbShowLeftMenu" >
+            <ThicknessAnimation Storyboard.TargetProperty="Margin" From="-100,0,0,0" To="0,0,0,0" DecelerationRatio=".9" Duration="0:0:1" />
+        </Storyboard>
+        <Storyboard x:Key="sbHideLeftMenu">
+            <ThicknessAnimation Storyboard.TargetProperty="Margin" From="0,0,0,0" To="-100,0,0,0" AccelerationRatio=".9" Duration="0:0:1" />
+        </Storyboard>
+    </Window.Resources>
+    <Grid>
+        <Canvas>
+            <StackPanel Name="st_panel" Background="#1687C3" Width="150" Margin="-100,0,0,0">
+                <DockPanel VerticalAlignment="Center" HorizontalAlignment="Right" Width="150" Height="50">
+                    <Button  Width="30" Height="35" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="14,10,10,10" Click="Button_Click" BorderThickness="0">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#1687C3"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Button.Background>
+                            <ImageBrush ImageSource="Images/Icons/ic_list_white_24dp.png"  />
+                        </Button.Background>
+                    </Button>
+                </DockPanel>
+                <DockPanel VerticalAlignment="Center" HorizontalAlignment="Right" Width="150" Height="50">
+                    <Label Width="100" Content="Home" VerticalAlignment="Center" FontFamily="Segoe UI Semibold" FontSize="18" FontWeight="Bold" />
+                    <Image Source="Images/Icons/ic_home_white_24dp.png" Width="28" Height="35" VerticalAlignment="Center" Margin="14,10,10,10" HorizontalAlignment="Right" />
+                </DockPanel>
+                <DockPanel VerticalAlignment="Center" HorizontalAlignment="Right" Width="150" Height="50">
+                    <Label Width="100" Content="News" VerticalAlignment="Center" FontFamily="Segoe UI Semibold" FontSize="18" FontWeight="Bold" />
+                    <Image Source="Images/Icons/ic_library_books_white_24dp.png" Width="28" Height="35" VerticalAlignment="Center" Margin="14,10,10,10" HorizontalAlignment="Right" />
+                </DockPanel>
+                <DockPanel VerticalAlignment="Center" HorizontalAlignment="Right" Width="150" Height="50">
+                    <Label Width="100" Content="Account" VerticalAlignment="Center" FontFamily="Segoe UI Semibold" FontSize="18" FontWeight="Bold" />
+                    <Image Source="Images/Icons/ic_account_circle_white_24dp.png" Width="28" Height="35" VerticalAlignment="Center" Margin="14,10,10,10" HorizontalAlignment="Right" />
+                </DockPanel>
+                <DockPanel VerticalAlignment="Center" HorizontalAlignment="Right" Width="150" Height="50">
+                    <Label Width="100" Content="Settings" VerticalAlignment="Center" FontFamily="Segoe UI Semibold" FontSize="18" FontWeight="Bold" />
+                    <Image Source="Images/Icons/ic_settings_white_24dp.png" Width="28" Height="35" VerticalAlignment="Center" Margin="14,10,10,10" HorizontalAlignment="Right" />
+                </DockPanel>
+            </StackPanel>
+        </Canvas>
+
+    </Grid>
+</Window>
