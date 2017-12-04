@@ -4,4 +4,25 @@
 
     <Color x:Key="background_color">#1687C3</Color>
     <SolidColorBrush x:Key="background" Color="{StaticResource background_color}" />
+
+    <Color x:Key="BGColorTitleBar">#003399</Color>
+    <SolidColorBrush x:Key="BGColorTitleBarBrush" Color="{StaticResource BGColorTitleBar}"/>
+
+    <Color x:Key="BGOnHover">#6b89ba</Color>
+    <SolidColorBrush x:Key="BGOnHoverBrush" Color="{StaticResource BGOnHover}" />
+
+    <Color x:Key="BackgroundLight">#efefef</Color>
+    <SolidColorBrush x:Key="BackgroundLightBrush" Color="{StaticResource BackgroundLight}" />
+
+    <Color x:Key="BackgroundVeryLight">#fafafa</Color>
+    <SolidColorBrush x:Key="BackgroundVeryLightBrush" Color="{StaticResource BackgroundVeryLight}" />
+
+    <Color x:Key="ForegroundMain">#686868</Color>
+    <SolidColorBrush x:Key="ForegroundMainBrush" Color="{StaticResource ForegroundMain}" />
+
+    <Color x:Key="ForegroundVeryDark">#000000</Color>
+    <SolidColorBrush x:Key="ForegroundVeryDarkBrush" Color="{StaticResource ForegroundVeryDark}" />
+
+    <Color x:Key="ForegroundLight">#ffffff</Color>
+    <SolidColorBrush x:Key="ForegroundLightBrush" Color="{StaticResource ForegroundLight}" />
 </ResourceDictionary>
