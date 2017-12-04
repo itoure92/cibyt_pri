@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:cibyt_pri"
         mc:Ignorable="d"
+        xmlns:resx="clr-namespace:cibyt_pri.Properties"
+        xmlns:bg="#1687C3"
         Title="MainWindow" Height="350" Width="525">
     <Window.Resources>
 
@@ -14,41 +16,55 @@
         <Storyboard x:Key="sbHideLeftMenu">
             <ThicknessAnimation Storyboard.TargetProperty="Margin" From="0,0,0,0" To="-100,0,0,0" AccelerationRatio=".9" Duration="0:0:1" />
         </Storyboard>
+        <Color x:Key="background_color">#1687C3</Color>
+        <SolidColorBrush x:Key="background" Color="{StaticResource background_color}" />
+
+        <!--<Image.Style>
+                <Style TargetType="Image">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property=""
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Image.Style>
+        </Image>-->
     </Window.Resources>
     <Grid>
         <Canvas>
             <StackPanel Name="st_panel" Background="#1687C3" Width="150" Margin="-100,0,0,0">
                 <DockPanel VerticalAlignment="Center" HorizontalAlignment="Right" Width="150" Height="50">
-                    <Button  Width="30" Height="35" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="14,10,10,10" Click="Button_Click" BorderThickness="0">
-                        <Button.Style>
+                    <Button Background="{StaticResource background}" Content="{StaticResource list_icon}" Width="30" Height="35" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="14,10,10,10" Click="Button_Click" BorderThickness="0">
+                        <!--<Button.Style>
                             <Style TargetType="Button">
                                 <Style.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Foreground" Value="#ffffff"/>
                                         <Setter Property="Background" Value="#1687C3"/>
                                     </Trigger>
                                 </Style.Triggers>
                             </Style>
-                        </Button.Style>
-                        <Button.Background>
+                        </Button.Style>-->
+                        <!--<Button.Background>
                             <ImageBrush ImageSource="Images/Icons/ic_list_white_24dp.png"  />
-                        </Button.Background>
+                        </Button.Background>-->
                     </Button>
                 </DockPanel>
                 <DockPanel VerticalAlignment="Center" HorizontalAlignment="Right" Width="150" Height="50">
                     <Label Width="100" Content="Home" VerticalAlignment="Center" FontFamily="Segoe UI Semibold" FontSize="18" FontWeight="Bold" />
-                    <Image Source="Images/Icons/ic_home_white_24dp.png" Width="28" Height="35" VerticalAlignment="Center" Margin="14,10,10,10" HorizontalAlignment="Right" />
+                    <Button Background="#1687C3" Content="{StaticResource home_icon}" Width="28" Height="35" VerticalAlignment="Center" Margin="14,10,10,10" HorizontalAlignment="Right" BorderThickness="0"/>
                 </DockPanel>
                 <DockPanel VerticalAlignment="Center" HorizontalAlignment="Right" Width="150" Height="50">
                     <Label Width="100" Content="News" VerticalAlignment="Center" FontFamily="Segoe UI Semibold" FontSize="18" FontWeight="Bold" />
-                    <Image Source="Images/Icons/ic_library_books_white_24dp.png" Width="28" Height="35" VerticalAlignment="Center" Margin="14,10,10,10" HorizontalAlignment="Right" />
+                    <Button Background="#1687C3" Content="{StaticResource news_icon}" Width="28" Height="35" VerticalAlignment="Center" Margin="14,10,10,10" HorizontalAlignment="Right" BorderThickness="0"/>
                 </DockPanel>
                 <DockPanel VerticalAlignment="Center" HorizontalAlignment="Right" Width="150" Height="50">
                     <Label Width="100" Content="Account" VerticalAlignment="Center" FontFamily="Segoe UI Semibold" FontSize="18" FontWeight="Bold" />
-                    <Image Source="Images/Icons/ic_account_circle_white_24dp.png" Width="28" Height="35" VerticalAlignment="Center" Margin="14,10,10,10" HorizontalAlignment="Right" />
+                    <Button Background="#1687C3" Content="{StaticResource account_icon}" Width="28" Height="35" VerticalAlignment="Center" Margin="14,10,10,10" HorizontalAlignment="Right" BorderThickness="0"/>
                 </DockPanel>
                 <DockPanel VerticalAlignment="Center" HorizontalAlignment="Right" Width="150" Height="50">
                     <Label Width="100" Content="Settings" VerticalAlignment="Center" FontFamily="Segoe UI Semibold" FontSize="18" FontWeight="Bold" />
-                    <Image Source="Images/Icons/ic_settings_white_24dp.png" Width="28" Height="35" VerticalAlignment="Center" Margin="14,10,10,10" HorizontalAlignment="Right" />
+                    <Button Background="#1687C3" Content="{StaticResource setting_icon}" Width="28" Height="35" VerticalAlignment="Center" Margin="14,10,10,10" HorizontalAlignment="Right" BorderThickness="0"/>
                 </DockPanel>
             </StackPanel>
         </Canvas>
