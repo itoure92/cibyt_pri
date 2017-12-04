@@ -43,5 +43,10 @@ namespace cibyt_pri
             Storyboard sb = Resources[key] as Storyboard;
             sb.Begin(this.st_panel);
         }
+
+        private void Home_Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Main.Content = new HomePage();
+        }
     }
 }
