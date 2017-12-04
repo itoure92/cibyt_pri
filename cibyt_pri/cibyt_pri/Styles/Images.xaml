@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:cibyt_pri.Styles">
+
+    <Image x:Key="list_icon" Source="../Images/Icons/ic_list_white_24dp.png"/>
+    <Image x:Key="home_icon" Source="../Images/Icons/ic_home_white_24dp.png"/>
+    <Image x:Key="news_icon" Source="../Images/Icons/ic_library_books_white_24dp.png"/>
+    <Image x:Key="account_icon" Source="../Images/Icons/ic_account_circle_white_24dp.png"/>
+    <Image x:Key="setting_icon" Source="../Images/Icons/ic_settings_white_24dp.png"/>
+    
+</ResourceDictionary>
