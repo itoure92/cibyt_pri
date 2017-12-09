@@ -1,4 +1,5 @@
-﻿using System;
+﻿using cibyt_pri.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -47,6 +48,11 @@ namespace cibyt_pri
         private void Home_Button_Click(object sender, RoutedEventArgs e)
         {
             this.Main.Content = new HomePage();
+        }
+
+        private void Profile_setting_Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Main.Content = new ProfileSettingPage();
         }
     }
 }

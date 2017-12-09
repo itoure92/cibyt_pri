@@ -5,6 +5,15 @@
     <Color x:Key="background_color">#1687C3</Color>
     <SolidColorBrush x:Key="background" Color="{StaticResource background_color}" />
 
+    <Color x:Key="home_back">#3399FF</Color>
+    <SolidColorBrush x:Key="home_background" Color="{StaticResource home_back}" />
+    
+    <Color x:Key="home_col">#990099</Color>
+    <SolidColorBrush x:Key="home_color" Color="{StaticResource home_col}" />
+
+    <Color x:Key="profile_setting">#FF3300</Color>
+    <SolidColorBrush x:Key="profile_setting_color" Color="{StaticResource profile_setting}" Opacity="0.44"/>
+
     <Color x:Key="BGColorTitleBar">#003399</Color>
     <SolidColorBrush x:Key="BGColorTitleBarBrush" Color="{StaticResource BGColorTitleBar}"/>
 
