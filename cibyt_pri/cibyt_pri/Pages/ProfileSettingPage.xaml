@@ -1,0 +1,43 @@
+﻿<Page x:Class="cibyt_pri.Pages.ProfileSettingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:cibyt_pri.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="321" d:DesignWidth="468"
+      Title="ProfileSettingPage">
+
+    <Grid Background="{StaticResource home_background}" Margin="0,0,-58,-0.2" Height="321" VerticalAlignment="Top">
+        <StackPanel VerticalAlignment="Top">
+            <Label Content="Profile Settings" 
+                   Background="{StaticResource profile_setting_color}" 
+                   FontFamily="Segoe UI Semibold" 
+                   FontSize="18" 
+                   FontWeight="Bold" />
+
+        </StackPanel>
+        <Label Content="First Name :" HorizontalAlignment="Left" Margin="10,39,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="85,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="107" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Last Name :" HorizontalAlignment="Left" Margin="237,38,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="343,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102"/>
+        <Label Content="Email :" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="85,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="108"/>
+        <Label Content="Username :" HorizontalAlignment="Left" Margin="10,104,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="85,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="108"/>
+        <Button Content="Change Password" HorizontalAlignment="Left" Margin="85,147,0,0" VerticalAlignment="Top" Width="108" Height="23"/>
+        <Label Content="Age :" HorizontalAlignment="Left" Margin="10,184,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="85,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="108"/>
+        <Label Content="Gender :" HorizontalAlignment="Left" Margin="237,183,0,0" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Margin="343,183,0,0" VerticalAlignment="Top" Width="102"/>
+        <Label Content="Profession :" HorizontalAlignment="Left" Margin="10,221,0,0" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Margin="85,221,0,0" VerticalAlignment="Top" Width="108"/>
+        <Label Content="Nationality :" HorizontalAlignment="Left" Margin="10,259,0,0" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Margin="85,259,0,0" VerticalAlignment="Top" Width="108"/>
+        <Label Content="Location :" HorizontalAlignment="Left" Margin="237,219,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.186,0.4"/>
+        <ComboBox HorizontalAlignment="Left" Margin="343,219,0,0" VerticalAlignment="Top" Width="102"/>
+        <Label Content="Activities on PC :" HorizontalAlignment="Left" Margin="237,258,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="343,258,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102"/>
+
+    </Grid>
+</Page>
