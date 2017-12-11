@@ -15,7 +15,6 @@
         </StackPanel>
         <TextBlock Style="{StaticResource TextBlockStyle}" HorizontalAlignment="Left" Margin="40,191,0,0" TextWrapping="Wrap" Text="PC Diagnostics" VerticalAlignment="Top" Width="99" FontWeight="Bold"/>
         <Grid Background="Red" HorizontalAlignment="Left" Height="84" Margin="40,218,0,0" VerticalAlignment="Top" Width="99" ShowGridLines="True">
-
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="2*"/>
@@ -32,8 +31,15 @@
             <TextBlock Style="{StaticResource TextBlockStyle}" Grid.Column="0" Grid.Row="3" Text="Network" Margin="0,0.6,49.2,0" Padding="3,2" Grid.ColumnSpan="2"/>
         </Grid>
         <TextBlock Style="{StaticResource TextBlockStyle}" HorizontalAlignment="Left" Margin="276,191,0,0" TextWrapping="Wrap" Text="Tips and Trics" VerticalAlignment="Top" Width="80" FontWeight="Bold"/>
-        <ListBox HorizontalAlignment="Left" Height="84" Margin="276,218,0,0" VerticalAlignment="Top" Width="100"/>
-
+        <ListBox HorizontalAlignment="Left" Height="84" Margin="268,218,0,0" VerticalAlignment="Top" Width="131"/>
+        <Grid Background="Red" Margin="268,65,69,148.8">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Style="{StaticResource TextBlockStyle}" Grid.Row="0" Text="Challenges" Margin="22,5,19,10" FontWeight="Bold" FontSize="16"/>
+        </Grid>
 
     </Grid>
 </Page>
