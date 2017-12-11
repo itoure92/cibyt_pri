@@ -7,5 +7,9 @@
     <Image x:Key="news_icon" Source="../Images/Icons/ic_library_books_white_24dp.png"/>
     <Image x:Key="account_icon" Source="../Images/Icons/ic_account_circle_white_24dp.png"/>
     <Image x:Key="setting_icon" Source="../Images/Icons/ic_settings_white_24dp.png"/>
+    <Image x:Key="browser_icon" Source="../Images/Icons/icons8-globe-50.png"/>
+    <Image x:Key="antivirus_icon" Source="../Images/Icons/icons8-antivirus-50.png"/>
+    <Image x:Key="mail_icon" Source="../Images/Icons/icons8-mailbox-50.png"/>
+    <Image x:Key="search_icon" Source="../Images/Icons/icons8-search-50.png"/>
     
 </ResourceDictionary>

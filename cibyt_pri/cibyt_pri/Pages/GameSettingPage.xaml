@@ -1,0 +1,20 @@
+﻿<Page x:Class="cibyt_pri.Pages.GameSettingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:cibyt_pri.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="321"
+      Title="GameSettingPage" Width="468">
+
+    <Grid Background="{StaticResource home_background}">
+        <StackPanel VerticalAlignment="Top">
+            <Label Content="Game Setting" Background="{StaticResource game_setting_color}" FontFamily="Segoe UI Semibold" FontSize="18" FontWeight="Bold" />
+        </StackPanel>
+        <Button Content="{StaticResource stPanel_browser}" HorizontalAlignment="Left" Margin="10,55,0,0" VerticalAlignment="Top" Width="126" Height="42" Click="Button_Click" Background="{x:Null}" BorderThickness="0"/>
+        <Button Content="{StaticResource stPanel_antivirus}" HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top" Width="126" Height="42" Background="{x:Null}" BorderThickness="0"/>
+        <Button Content="{StaticResource stPanel_mail}" HorizontalAlignment="Left" Margin="10,172,0,0" VerticalAlignment="Top" Width="126" Height="42" Background="{x:Null}" BorderThickness="0"/>
+        <Button Content="{StaticResource stPanel_search}" HorizontalAlignment="Left" Margin="10,232,0,0" VerticalAlignment="Top" Width="126" Height="42" Background="{x:Null}" Padding="1" BorderThickness="0"/>
+    </Grid>
+</Page>

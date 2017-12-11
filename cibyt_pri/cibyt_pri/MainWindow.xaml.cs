@@ -54,5 +54,10 @@ namespace cibyt_pri
         {
             this.Main.Content = new ProfileSettingPage();
         }
+
+        private void Game_setting_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Main.Content = new GameSettingPage();
+        }
     }
 }

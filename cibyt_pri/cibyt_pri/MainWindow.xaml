@@ -196,7 +196,7 @@
                 </DockPanel>
                 <DockPanel VerticalAlignment="Center" HorizontalAlignment="Right" Width="150" Height="50">
                     <Label Width="100" Content="Settings" VerticalAlignment="Center" FontFamily="Segoe UI Semibold" FontSize="18" FontWeight="Bold" />
-                    <Button Background="{StaticResource background}" Content="{StaticResource setting_icon}" Width="28" Height="35" VerticalAlignment="Center" Margin="14,10,10,10" HorizontalAlignment="Right" BorderThickness="0" />
+                    <Button Background="{StaticResource background}" Content="{StaticResource setting_icon}" Width="28" Height="35" VerticalAlignment="Center" Margin="14,10,10,10" HorizontalAlignment="Right" BorderThickness="0" Click="Game_setting_Click_1" />
                 </DockPanel>
             </StackPanel>
         </Canvas>

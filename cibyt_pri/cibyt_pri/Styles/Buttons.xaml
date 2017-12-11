@@ -6,9 +6,34 @@
 		<ResourceDictionary Source="Colors.xaml" />
 		<ResourceDictionary Source="Fonts.xaml" />
 	</ResourceDictionary.MergedDictionaries>
+    <!-- Buttons for the Game Setting -->
+    <Border x:Key="stPanel_browser" CornerRadius="5" Background="#00FF00">
+        <StackPanel Orientation="Horizontal" >
+            <TextBlock Text="Browser" VerticalAlignment="Center" Margin="5,0,0,0" FontWeight="Bold"/>
+            <Image Source="../Images/Icons/icons8-globe-50.png" Width="40" Height="40" Margin="20,0,0,0"/>
+        </StackPanel>
+    </Border>
 
-	<!-- Hoverless button -->
-	<Style TargetType="{x:Type Button}" x:Key="Hoverless">
+    <Border x:Key="stPanel_antivirus" CornerRadius="5" Background="#CC00CC">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Antivirus" VerticalAlignment="Center" Margin="5,0,0,0" FontWeight="Bold"/>
+            <Image Source="../Images/Icons/icons8-antivirus-50.png" Width="40" Height="40" Margin="20,0,0,0"/>
+        </StackPanel>
+    </Border>
+    <Border x:Key="stPanel_mail" CornerRadius="5" Background="#0000CC">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Mail App" VerticalAlignment="Center" Margin="5,0,0,0" FontWeight="Bold"/>
+            <Image Source="../Images/Icons/icons8-mailbox-50.png" Width="40" Height="40" Margin="20,0,0,0"/>
+        </StackPanel>
+    </Border>
+    <Border x:Key="stPanel_search" CornerRadius="5" Background="#CC6600">
+            <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Search Engine" VerticalAlignment="Center" Margin="5,0,0,0" FontWeight="Bold"/>
+            <Image Source="../Images/Icons/icons8-search-50.png" Width="40" Height="40"/>
+        </StackPanel>
+    </Border>
+    <!-- Hoverless button -->
+    <Style TargetType="{x:Type Button}" x:Key="Hoverless">
 		<Setter Property="Background" Value="Transparent" />
 		<Setter Property="BorderThickness" Value="0" />
 
