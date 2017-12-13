@@ -8,7 +8,7 @@
       d:DesignHeight="321" d:DesignWidth="468"
       Title="HomePage">
 
-    <Grid Background="{StaticResource home_background}">
+    <Grid>
         <StackPanel VerticalAlignment="Top">
             <Label Content="Home" Background="{StaticResource home_color}" FontFamily="Segoe UI Semibold" FontSize="18" FontWeight="Bold" />
 

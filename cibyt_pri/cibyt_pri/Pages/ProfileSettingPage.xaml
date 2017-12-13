@@ -8,7 +8,7 @@
       d:DesignHeight="321" d:DesignWidth="468"
       Title="ProfileSettingPage">
 
-    <Grid Background="{StaticResource home_background}" Margin="0,0,-58,-0.2" Height="321" VerticalAlignment="Top">
+    <Grid Margin="0,0,-58,-0.2" Height="321" VerticalAlignment="Top">
         <StackPanel VerticalAlignment="Top">
             <Label Content="Profile Settings" 
                    Background="{StaticResource profile_setting_color}" 
@@ -38,6 +38,7 @@
         <ComboBox HorizontalAlignment="Left" Margin="343,219,0,0" VerticalAlignment="Top" Width="102"/>
         <TextBlock Style="{StaticResource TextBlockStyle}" Text="Activities on PC :" HorizontalAlignment="Left" Margin="237,258,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="343,258,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102"/>
+        <Button Content="Save" Background="Green" HorizontalAlignment="Left" Margin="426,293,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.397,-0.364"/>
 
     </Grid>
 </Page>

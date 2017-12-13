@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Gma.QrCodeNet.Encoding;
+using Gma.QrCodeNet.Encoding.Windows.Render;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,14 @@ namespace cibyt_pri.Pages
         public GameSettingPage()
         {
             InitializeComponent();
+            QrEncoder encoder = new QrEncoder(ErrorCorrectionLevel.M);
+            QrCode qrCode;
+            encoder.TryEncode("tototata", out qrCode);
+            WriteableBitmapRenderer wRenderer = new WriteableBitmapRenderer(new FixedModuleSize(2, QuietZoneModules.Two), Colors.Black, Colors.White);
+            WriteableBitmap wBitmap = new WriteableBitmap(70, 70, 96, 96, PixelFormats.Gray8, null);
+            wRenderer.Draw(wBitmap, qrCode.Matrix);
+
+            QrCodeImage.Source = wBitmap;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

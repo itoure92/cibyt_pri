@@ -177,7 +177,7 @@
     </WindowChrome.WindowChrome>-->
     <Grid>
         <Canvas>
-            <Frame Name="Main" Height="321" Canvas.Left="50" Width="468" NavigationUIVisibility="Hidden"/>
+            <Frame Background="{StaticResource background}" Name="Main" Height="321" Canvas.Left="50" Width="468" NavigationUIVisibility="Hidden"/>
             <StackPanel Name="st_panel" Background="{StaticResource background}" Width="150" Margin="-100,0,0,0">
                 <DockPanel VerticalAlignment="Center" HorizontalAlignment="Right" Width="150" Height="50">
                     <Button Background="{StaticResource background}" Content="{StaticResource list_icon}" Width="30" Height="35" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="14,10,10,10" Click="Button_Click" BorderThickness="0"/>
