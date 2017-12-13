@@ -1,4 +1,4 @@
-﻿//using PropertyChanged;
+﻿using PropertyChanged;
 using System.ComponentModel;
 
 namespace cibyt_pri
@@ -6,7 +6,7 @@ namespace cibyt_pri
     /// <summary>
     /// A base view model that fires Property Changed events as needed
     /// </summary>
-    //[AddINotifyPropertyChangedInterface]
+    [AddINotifyPropertyChangedInterface]
     public class BaseViewModel : INotifyPropertyChanged
     {
         /// <summary>

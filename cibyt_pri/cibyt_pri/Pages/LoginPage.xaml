@@ -1,0 +1,114 @@
+﻿<Page x:Class="cibyt_pri.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:cibyt_pri"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="700"
+      Title="LoginPage">
+
+	<StackPanel>
+		<Grid Height="70"/>
+
+		<Grid>
+			<Ellipse Fill="#FFFFFF"
+                Height="200"
+                Width="200"/>
+			<Image Source="/Images/computer_guy.png"
+                Height="210"
+                Width="210"/>
+		</Grid>
+
+		<Grid Margin="0,5,0,3">
+			<Grid.ColumnDefinitions>
+				<!-- Empty Space -->
+				<ColumnDefinition Width="*" />
+				<!-- Username -->
+				<ColumnDefinition Width="*" />
+				<!-- Empty Space -->
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+			<Grid Grid.Column="1">
+				<Grid.ColumnDefinitions>
+					<!-- Username Icon -->
+					<ColumnDefinition Width="Auto" />
+					<!-- Username -->
+					<ColumnDefinition Width="*" />
+				</Grid.ColumnDefinitions>
+				<Image Grid.Column="0" Source="/Images/user_icon.png" Width="40" Height="40" />
+				<TextBox Style="{StaticResource Credentials}" Grid.Column="1"/>
+			</Grid>
+		</Grid>
+
+		<Grid Margin="0,5,0,3">
+			<Grid.ColumnDefinitions>
+				<!-- Empty Space -->
+				<ColumnDefinition Width="*" />
+				<!-- Password -->
+				<ColumnDefinition Width="*" />
+				<!-- Empty Space -->
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+			<Grid Grid.Column="1">
+				<Grid.ColumnDefinitions>
+					<!-- Password Icon -->
+					<ColumnDefinition Width="Auto" />
+					<!-- Password -->
+					<ColumnDefinition Width="*" />
+				</Grid.ColumnDefinitions>
+				<Image Grid.Column="0" Source="/Images/password_icon.png" Width="40" Height="40" />
+				<PasswordBox Style="{StaticResource CredentialsPass}" Grid.Column="1"/>
+			</Grid>
+		</Grid>
+
+		<Button Style="{StaticResource RoundedBorderedButton}" 
+				Margin="0,10,0,0" 
+				Name="sign_in"
+				Width="150" 
+				Height="40">
+			<TextBlock Style="{StaticResource ButtonText}">SIGN IN</TextBlock>
+		</Button>
+
+		<TextBlock HorizontalAlignment="Center" Margin="20,20,20,10">
+			<Hyperlink Foreground="Red">Forgot your password?</Hyperlink>
+		</TextBlock>
+
+		<Grid Margin="0,0,0,0">
+			<Grid.ColumnDefinitions>
+				<!-- Empty Space -->
+				<ColumnDefinition Width="2*" />
+				<!-- Facebook Google -->
+				<ColumnDefinition Width="Auto" />
+				<!-- Empty Space -->
+				<ColumnDefinition Width="2*" />
+			</Grid.ColumnDefinitions>
+			<Grid Grid.Column="1">
+				<Grid.ColumnDefinitions>
+					<!-- Facebook -->
+					<ColumnDefinition Width="Auto" />
+					<!-- Empty Space -->
+					<ColumnDefinition Width="*" />
+					<!-- Google -->
+					<ColumnDefinition Width="Auto" />
+				</Grid.ColumnDefinitions>
+
+				<Button Grid.Column="0" Style="{StaticResource FacebookGoogle}" Margin="0,0,10,0">
+					<Image Source="/Images/facebook.png" />
+				</Button>
+
+				<Button Grid.Column="2" Style="{StaticResource FacebookGoogle}" Margin="10,0,0,0">
+					<Image Source="/Images/google_plus_squared.png" />
+				</Button>
+			</Grid>
+		</Grid>
+
+		<Button Style="{StaticResource RoundedBorderedButton}" 
+				Margin="0,10,0,0" 
+				Name="sign_up"
+				Width="190" 
+				Height="40">
+			<TextBlock Style="{StaticResource ButtonText}">NEW ACCOUNT</TextBlock>
+		</Button>
+	</StackPanel>
+</Page>

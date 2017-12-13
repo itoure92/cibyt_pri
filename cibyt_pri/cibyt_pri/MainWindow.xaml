@@ -5,180 +5,115 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:cibyt_pri"
         mc:Ignorable="d"
+		WindowStyle="None"
+		x:Name="AppWindow"
+		AllowsTransparency="True"
 		WindowStartupLocation="CenterScreen"
-		Icon="Images/Icons/CyBit-logo.png"
-        xmlns:resx="clr-namespace:cibyt_pri.Properties"
-        Title="Cibyt" Height="350" Width="525">
-    <Window.Resources>
+		Icon="Images/CyBit-logo.png"
+        Title="CyBit" Height="700" Width="700">
+	<Window.Resources>
+		<Storyboard x:Key="sbShowLeftMenu" >
+			<ThicknessAnimation Storyboard.TargetProperty="Margin" From="-100,0,0,0" To="0,0,0,0" DecelerationRatio=".9" Duration="0:0:1" />
+		</Storyboard>
+		<Storyboard x:Key="sbHideLeftMenu">
+			<ThicknessAnimation Storyboard.TargetProperty="Margin" From="0,0,0,0" To="-100,0,0,0" AccelerationRatio=".9" Duration="0:0:1" />
+		</Storyboard>
+		<Style TargetType="{x:Type local:MainWindow}">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type Window}">
+						<!-- Outer border with the dropshadow margin -->
+						<Border Padding="{Binding OuterMarginSizeThickness, FallbackValue=10}">
+							<!-- Main window outline -->
+							<Grid>
+								<!-- Opacity mask for corners on grid -->
+								<Border x:Name="Container"
+                                        Background="{StaticResource BGColorTitleBarBrush}"/>
 
-        <Storyboard x:Key="sbShowLeftMenu" >
-            <ThicknessAnimation Storyboard.TargetProperty="Margin" From="-100,0,0,0" To="0,0,0,0" DecelerationRatio=".9" Duration="0:0:1" />
-        </Storyboard>
-        <Storyboard x:Key="sbHideLeftMenu">
-            <ThicknessAnimation Storyboard.TargetProperty="Margin" From="0,0,0,0" To="-100,0,0,0" AccelerationRatio=".9" Duration="0:0:1" />
-        </Storyboard>
+								<!-- Window border and dropshadown -->
+								<Border Background="{Binding BGColorTitleBarBrush, FallbackValue=White}">
+									<Border.Effect>
+										<DropShadowEffect ShadowDepth="0" Opacity="0.2" />
+									</Border.Effect>
+								</Border>
 
-        <!--<Style TargetType="{x:Type local:MainWindow}">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Window}">
-                        -->
-        <!-- Outer border with the dropshadow margin -->
-        <!--
-                        <Border Padding="{Binding OuterMarginSizeThickness, FallbackValue=10}">
-                            -->
-        <!-- Main window outline -->
-        <!--
-                            <Grid>
-                                -->
-        <!-- Opacity mask for corners on grid -->
-        <!--
-                                <Border x:Name="Container"
-                                        Background="{StaticResource BackgroundLightBrush}"
-                                        CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}" />
+								<!-- The main window content -->
+								<Grid>
+									<!-- Corner clipping -->
+									<Grid.OpacityMask>
+										<VisualBrush Visual="{Binding ElementName=Container}" />
+									</Grid.OpacityMask>
 
-                                -->
-        <!-- Window border and dropshadown -->
-        <!--
-                                <Border CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}"
-                                    Background="{Binding ForegroundLightBrush, FallbackValue=White}">
-                                    <Border.Effect>
-                                        <DropShadowEffect ShadowDepth="0" Opacity="0.2" />
-                                    </Border.Effect>
-                                </Border>
+									<Grid.RowDefinitions>
+										<!-- Title Bar -->
+										<RowDefinition Height="{Binding TitleHeightGridLength, FallbackValue=20}" />
+										<!-- Window Content -->
+										<RowDefinition Height="*" />
+									</Grid.RowDefinitions>
 
-                                -->
-        <!-- The main window content -->
-        <!--
-                                <Grid>
-                                    -->
-        <!-- Corner clipping -->
-        <!--
-                                    <Grid.OpacityMask>
-                                        <VisualBrush Visual="{Binding ElementName=Container}" />
-                                    </Grid.OpacityMask>
+									<!-- Title Bar -->
+									<Grid Grid.Column="0" Background="{StaticResource BGColorTitleBarBrush}" Panel.ZIndex="1" Margin="0,0,0,0">
 
-                                    <Grid.RowDefinitions>
-                                        -->
-        <!-- Title Bar -->
-        <!--
-                                        <RowDefinition Height="{Binding TitleHeightGridLength, FallbackValue=25}" />
-                                        -->
-        <!-- Drop shadow -->
-        <!--
-                                        <RowDefinition Height="Auto" />
-                                        -->
-        <!-- Window Content -->
-        <!--
-                                        <RowDefinition Height="*" />
-                                    </Grid.RowDefinitions>
+										<Grid.ColumnDefinitions>
+											<!-- Icon -->
+											<ColumnDefinition Width="Auto" />
+											<!-- Title -->
+											<ColumnDefinition Width="*" />
+											<!-- Windows Button -->
+											<ColumnDefinition Width="Auto" />
+										</Grid.ColumnDefinitions>
 
-                                    -->
-        <!-- Title Bar -->
-        <!--
-                                    <Grid Background="{StaticResource BGColorTitleBarBrush}" Grid.Column="0" Panel.ZIndex="1">
+										<!-- Icon -->
+										<Button Style="{StaticResource SystemIconButton}" Command="{Binding MenuCommand}" Margin="10, 0, 0, 0">
+											<Image Source="/Images/CyBit-logo.png" />
+										</Button>
 
-                                        <Grid.ColumnDefinitions>
-                                            -->
-        <!-- Icon -->
-        <!--
-                                            <ColumnDefinition Width="Auto" />
-                                            -->
-        <!-- Title -->
-        <!--
-                                            <ColumnDefinition Width="*" />
-                                            -->
-        <!-- Windows Button -->
-        <!--
-                                            <ColumnDefinition Width="Auto" />
+										<!-- Title -->
+										<Viewbox Grid.Column="0" Grid.ColumnSpan="3" Margin="0">
+											<TextBlock Style="{StaticResource HeaderText}" Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title, FallbackValue='CyBit'}" />
+										</Viewbox>
 
-                                        </Grid.ColumnDefinitions>
+										<!-- Window Buttons -->
+										<StackPanel Grid.Column="2" Orientation="Horizontal">
+											<Button Command="{Binding MinimizeCommand}" Style="{StaticResource WindowControlButton}">
+												<Image Source="/Images/Minimize.png" />
+											</Button>
+											<Button Command="{Binding MaximizeCommand}" Style="{StaticResource WindowControlButton}">
+												<Image Source="/Images/Maximize.png" />
+											</Button>
+											<Button Command="{Binding CloseCommand}" Style="{StaticResource WindowCloseButton}">
+												<Image Source="/Images/Close.png" />
+											</Button>
+										</StackPanel>
 
-                                        -->
-        <!-- Icon -->
-        <!--
-                                        <Button Style="{StaticResource SystemIconButton}" Command="{Binding MenuCommand}">
-                                            <Image Source="/Images/Icons/CyBit-logo.png" />
-                                        </Button>
+									</Grid>
 
-                                        -->
-        <!-- Title -->
-        <!--
-                                        <Viewbox Grid.Column="1" Margin="0">
-                                            <TextBlock Style="{StaticResource HeaderText}" Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title, FallbackValue='CyBit'}" />
-                                        </Viewbox>
+									<!-- Page Content -->
+									<Border Grid.Row="1">
+										<ContentPresenter Content="{TemplateBinding Content}" />
+									</Border>
+								</Grid>
+							</Grid>
+						</Border>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+	</Window.Resources>
 
-                                        -->
-        <!-- Window Buttons -->
-        <!--
-                                        <StackPanel Grid.Column="2" Orientation="Horizontal">
-                                            <Button Command="{Binding MinimizeCommand}" Style="{StaticResource WindowControlButton}">
-                                                <Image Source="/Images/Icons/minimize-window-96.png" />
-                                            </Button>
-                                            <Button Command="{Binding MaximizeCommand}" Style="{StaticResource WindowControlButton}">
-                                                <Image Source="/Images/Icons/maximize-window-96.png" />
-                                            </Button>
-                                            <Button Command="{Binding CloseCommand}" Style="{StaticResource WindowCloseButton}">
-                                                <Image Source="/Images/Icons/close-window-96.png" />
-                                            </Button>
-                                        </StackPanel>
-
-                                    </Grid>
-
-                                    -->
-        <!-- Drop shadow -->
-        <!--
-                                    <Border Grid.Row="1" Height="6" BorderThickness="0 0.2 0 0">
-                                        -->
-        <!-- Underline -->
-        <!--
-                                        <Border.BorderBrush>
-                                            <LinearGradientBrush StartPoint="0,0" EndPoint="1, 0">
-                                                <GradientStop Color="{StaticResource ForegroundLight}" Offset="0.0" />
-                                                <GradientStop Color="{StaticResource ForegroundMain}" Offset="0.5" />
-                                                <GradientStop Color="{StaticResource ForegroundLight}" Offset="1.0" />
-                                            </LinearGradientBrush>
-                                        </Border.BorderBrush>
-
-                                        -->
-        <!-- Drop shadow -->
-        <!--
-                                        <Border.Background>
-                                            <LinearGradientBrush StartPoint="0,0" EndPoint="0, 1">
-                                                <GradientStop Color="{StaticResource BackgroundVeryLight}" Offset="0.0" />
-                                                <GradientStop Color="{StaticResource ForegroundLight}" Offset="1.0" />
-                                            </LinearGradientBrush>
-                                        </Border.Background>
-
-                                    </Border>
-
-                                    -->
-        <!-- Page Content -->
-        <!--
-                                    <Border Grid.Row="2" Padding="{Binding InnerContentPadding}">
-                                        <ContentPresenter Content="{TemplateBinding Content}" />
-                                    </Border>
-                                </Grid>
-                            </Grid>
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>-->
-
-        
-    </Window.Resources>
-    <!--<WindowChrome.WindowChrome>
-        <WindowChrome 
+	<WindowChrome.WindowChrome>
+		<WindowChrome 
 			ResizeBorderThickness="{Binding ResizeBorder}"
 			CaptionHeight="{Binding TitleHeight}"
 			GlassFrameThickness="0"
 			/>
-    </WindowChrome.WindowChrome>-->
-    <Grid>
-        <Canvas>
-            <Frame Background="{StaticResource background}" Name="Main" Height="321" Canvas.Left="50" Width="468" NavigationUIVisibility="Hidden"/>
-            <StackPanel Name="st_panel" Background="{StaticResource background}" Width="150" Margin="-100,0,0,0">
+	</WindowChrome.WindowChrome>
+
+	<Grid Background="{StaticResource BGWindowColorBrush}">
+		<Frame x:Name="Main" Content="{Binding CurrentPage, Converter={local:ApplicationPageValueConverter}}"/>
+		<Canvas>
+			<!--<Frame Background="{StaticResource background}" Name="Main" Height="321" Canvas.Left="50" Width="468" NavigationUIVisibility="Hidden"/>-->
+			<StackPanel Name="st_panel" Background="{StaticResource background}" Width="150" Margin="-100,0,0,0">
                 <DockPanel VerticalAlignment="Center" HorizontalAlignment="Right" Width="150" Height="50">
                     <Button Background="{StaticResource background}" Content="{StaticResource list_icon}" Width="30" Height="35" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="14,10,10,10" Click="Button_Click" BorderThickness="0"/>
                 </DockPanel>

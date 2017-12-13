@@ -11,7 +11,6 @@ namespace cibyt_pri
     public class WindowViewModel : BaseViewModel
     {
         #region Private Member
-
         /// <summary>
         /// The window this view model controls
         /// </summary>
@@ -20,22 +19,15 @@ namespace cibyt_pri
         /// <summary>
         /// The margin around the window to allow for a drop shadow
         /// </summary>
-        private int mOuterMarginSize = 10;
-
-        /// <summary>
-        /// The radius of the edges of the window
-        /// </summary>
-        private int mWindowRadius = 10;
+        private int mOuterMarginSize = 6;
 
         /// <summary>
         /// The last known dock position
         /// </summary>
         //private WindowDockPosition mDockPosition = WindowDockPosition.Undocked;
-
         #endregion
 
         #region Public Properties
-
         /// <summary>
         /// The smallest width the window can go to
         /// </summary>
@@ -59,12 +51,7 @@ namespace cibyt_pri
         /// <summary>
         /// The size of the resize border around the window, taking into account the outer margin
         /// </summary>
-        public Thickness ResizeBorderThickness { get { return new Thickness(ResizeBorder + OuterMarginSize); } }
-
-        /// <summary>
-        /// The padding of the inner content of the main window
-        /// </summary>
-        public Thickness InnerContentPadding { get { return new Thickness(ResizeBorder); } }
+        public Thickness ResizeBorderThickness { get { return new Thickness(ResizeBorder - OuterMarginSize); } }
 
         /// <summary>
         /// The margin around the window to allow for a drop shadow
@@ -74,7 +61,7 @@ namespace cibyt_pri
             get
             {
                 // If it is maximized or docked, no border
-                return Borderless ? 0 : mOuterMarginSize;
+                return mWindow.WindowState == WindowState.Maximized ? 6 : mOuterMarginSize;
             }
             set
             {
@@ -88,39 +75,22 @@ namespace cibyt_pri
         public Thickness OuterMarginSizeThickness { get { return new Thickness(OuterMarginSize); } }
 
         /// <summary>
-        /// The radius of the edges of the window
-        /// </summary>
-        public int WindowRadius
-        {
-            get
-            {
-                // If it is maximized or docked, no border
-                return Borderless ? 0 : mWindowRadius;
-            }
-            set
-            {
-                mWindowRadius = value;
-            }
-        }
-
-        /// <summary>
-        /// The radius of the edges of the window
-        /// </summary>
-        public CornerRadius WindowCornerRadius { get { return new CornerRadius(WindowRadius); } }
-
-        /// <summary>
         /// The height of the title bar / caption of the window
         /// </summary>
-        public int TitleHeight { get; set; } = 25;
+        public int TitleHeight { get; set; } = 20;
         /// <summary>
         /// The height of the title bar / caption of the window
         /// </summary>
         public GridLength TitleHeightGridLength { get { return new GridLength(TitleHeight + ResizeBorder); } }
 
+        /// <summary>
+        /// The curent page of the application
+        /// </summary>
+        public ApplicationPage CurrentPage { get; set; } = ApplicationPage.Login;
+
         #endregion
 
         #region Commands
-
         /// <summary>
         /// The command to minimize the window
         /// </summary>
@@ -140,11 +110,9 @@ namespace cibyt_pri
         /// The command to show the system menu of the window
         /// </summary>
         public ICommand MenuCommand { get; set; }
-
         #endregion
 
         #region Constructor
-
         /// <summary>
         /// Default constructor
         /// </summary>
@@ -178,11 +146,9 @@ namespace cibyt_pri
                 WindowResized();
             };*/
         }
-
         #endregion
 
         #region Private Helpers
-
         /// <summary>
         /// Gets the current mouse position on the screen
         /// </summary>
@@ -207,11 +173,7 @@ namespace cibyt_pri
             OnPropertyChanged(nameof(ResizeBorderThickness));
             OnPropertyChanged(nameof(OuterMarginSize));
             OnPropertyChanged(nameof(OuterMarginSizeThickness));
-            OnPropertyChanged(nameof(WindowRadius));
-            OnPropertyChanged(nameof(WindowCornerRadius));
         }
-
-
         #endregion
     }
 }

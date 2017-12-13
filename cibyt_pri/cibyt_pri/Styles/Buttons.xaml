@@ -32,8 +32,9 @@
             <Image Source="../Images/Icons/icons8-search-50.png" Width="40" Height="40"/>
         </StackPanel>
     </Border>
-    <!-- Hoverless button -->
-    <Style TargetType="{x:Type Button}" x:Key="Hoverless">
+
+	<!-- Hoverless button -->
+	<Style TargetType="{x:Type Button}" x:Key="Hoverless">
 		<Setter Property="Background" Value="Transparent" />
 		<Setter Property="BorderThickness" Value="0" />
 
@@ -50,17 +51,17 @@
 
 	<!-- System Icon Button -->
 	<Style TargetType="{x:Type Button}" x:Key="SystemIconButton" BasedOn="{StaticResource Hoverless}">
-
 		<Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
 		<Setter Property="Padding" Value="0" />
-
 	</Style>
 
 	<!-- Window Control Button -->
 	<Style TargetType="{x:Type Button}" x:Key="WindowControlButton">
 		<Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
 		<Setter Property="Background" Value="Transparent" />
-		<Setter Property="Padding" Value="3"/>
+		<Setter Property="Padding" Value="0"/>
+		<Setter Property="Width" Value="45"/>
+		<Setter Property="Height" Value="20"/>
 
 		<Setter Property="Template">
 			<Setter.Value>
@@ -77,7 +78,6 @@
 				<Setter Property="Background" Value="{StaticResource BGOnHoverBrush}" />
 			</Trigger>
 		</Style.Triggers>
-
 	</Style>
 
 	<!-- Window Close Button -->
@@ -90,5 +90,42 @@
 			</Trigger>
 		</Style.Triggers>
 
+	</Style>
+
+	<!-- Rounded Corner Button -->
+	<Style TargetType="{x:Type Button}" x:Key="RoundedBorderedButton">
+		<Setter Property="Background" Value="{StaticResource  BGLoginPageButtonColorBrush}"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Border  CornerRadius="20,20,20,20" Background="{TemplateBinding Background}">
+						<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger Property="IsMouseOver" Value="True">
+				<Setter Property="Background" Value="#496ba3"/>
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+
+	<!-- Facebook Google Button -->
+	<Style TargetType="{x:Type Button}" x:Key="FacebookGoogle">
+		<Setter Property="Background" Value="Transparent" />
+		<Setter Property="Padding" Value="0"/>
+		<Setter Property="Width" Value="50"/>
+		<Setter Property="Height" Value="50"/>
+
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}">
+						<ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
 	</Style>
 </ResourceDictionary>
