@@ -48,17 +48,20 @@ namespace cibyt_pri
 
         private void Home_Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Main.Content = new HomePage();
+            ((WindowViewModel)this.DataContext).CurrentPage = ApplicationPage.HomePage;
+            ((WindowViewModel)DataContext).OnPropertyChanged("CurrentPage");
         }
 
         private void Profile_setting_Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Main.Content = new ProfileSettingPage();
+            ((WindowViewModel)this.DataContext).CurrentPage = ApplicationPage.ProfilSettingPage;
+            ((WindowViewModel)DataContext).OnPropertyChanged("CurrentPage");
         }
 
         private void Game_setting_Click_1(object sender, RoutedEventArgs e)
         {
-            this.Main.Content = new GameSettingPage();
+            ((WindowViewModel)this.DataContext).CurrentPage = ApplicationPage.GameSettingPage;
+            ((WindowViewModel)DataContext).OnPropertyChanged("CurrentPage");
         }
     }
 }
