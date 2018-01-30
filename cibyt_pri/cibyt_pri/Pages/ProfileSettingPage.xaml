@@ -4,11 +4,11 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:cibyt_pri.Pages"
-      mc:Ignorable="d" 
-      d:DesignHeight="321" d:DesignWidth="468"
+      mc:Ignorable="d"
+      d:DesignHeight="700" d:DesignWidth="700"
       Title="ProfileSettingPage">
 
-    <Grid Margin="0,0,-58,-0.2" Height="321" VerticalAlignment="Top">
+    <Grid>
         <StackPanel VerticalAlignment="Top">
             <Label Content="Profile Settings" 
                    Background="{StaticResource profile_setting_color}" 
@@ -17,28 +17,28 @@
                    FontWeight="Bold" />
 
         </StackPanel>
-		<TextBlock Style="{StaticResource BaseTextBlockStyle}" Text="First Name :" HorizontalAlignment="Left" Margin="10,39,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="85,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="107" TextChanged="TextBox_TextChanged"/>
-		<TextBlock Style="{StaticResource BaseTextBlockStyle}" Text="Last Name :" HorizontalAlignment="Left" Margin="237,38,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="343,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102"/>
-		<TextBlock Style="{StaticResource BaseTextBlockStyle}" Text="Email :" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="85,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="108"/>
-		<TextBlock Style="{StaticResource BaseTextBlockStyle}" Text="Username :" HorizontalAlignment="Left" Margin="10,104,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="85,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="108"/>
-        <Button Content="Change Password" HorizontalAlignment="Left" Margin="85,147,0,0" VerticalAlignment="Top" Width="108" Height="23" Background="#FFE43E3E" BorderBrush="#FF7C4949" BorderThickness="1"/>
-		<TextBlock Style="{StaticResource BaseTextBlockStyle}" Text="Age :" HorizontalAlignment="Left" Margin="10,184,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="85,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="108"/>
-		<TextBlock Style="{StaticResource BaseTextBlockStyle}" Text="Gender :" HorizontalAlignment="Left" Margin="237,183,0,0" VerticalAlignment="Top"/>
-        <ComboBox HorizontalAlignment="Left" Margin="343,183,0,0" VerticalAlignment="Top" Width="102"/>
-		<TextBlock Style="{StaticResource BaseTextBlockStyle}" Text="Profession :" HorizontalAlignment="Left" Margin="10,221,0,0" VerticalAlignment="Top"/>
-        <ComboBox HorizontalAlignment="Left" Margin="85,221,0,0" VerticalAlignment="Top" Width="108"/>
-		<TextBlock Style="{StaticResource BaseTextBlockStyle}" Text="Nationality :" HorizontalAlignment="Left" Margin="10,259,0,0" VerticalAlignment="Top"/>
-        <ComboBox HorizontalAlignment="Left" Margin="85,259,0,0" VerticalAlignment="Top" Width="108"/>
-		<TextBlock Style="{StaticResource BaseTextBlockStyle}" Text="Location :" HorizontalAlignment="Left" Margin="237,219,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.186,0.4"/>
-        <ComboBox HorizontalAlignment="Left" Margin="343,219,0,0" VerticalAlignment="Top" Width="102"/>
-		<TextBlock Style="{StaticResource BaseTextBlockStyle}" Text="Activities on PC :" HorizontalAlignment="Left" Margin="237,258,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="343,258,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102"/>
-        <Button Content="Save" Background="Green" HorizontalAlignment="Left" Margin="426,293,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.397,-0.364"/>
+        <TextBlock Style="{StaticResource BaseTextBlockStyle}" Text="First Name :" HorizontalAlignment="Left" Margin="56,110,0,0" VerticalAlignment="Top" FontSize="15"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="156,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="107" TextChanged="TextBox_TextChanged"/>
+        <TextBlock Style="{StaticResource BaseTextBlockStyle}" Text="Last Name :" HorizontalAlignment="Left" Margin="319,105,0,0" VerticalAlignment="Top" FontSize="15"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="453,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102"/>
+        <TextBlock Style="{StaticResource BaseTextBlockStyle}" Text="Email :" HorizontalAlignment="Left" Margin="56,190,0,0" VerticalAlignment="Top" FontSize="15"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="156,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="108"/>
+        <TextBlock Style="{StaticResource BaseTextBlockStyle}" Text="Username :" HorizontalAlignment="Left" Margin="56,265,0,0" VerticalAlignment="Top" FontSize="15"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="156,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="108"/>
+        <Button Content="Change Password" HorizontalAlignment="Left" Margin="156,339,0,0" VerticalAlignment="Top" Width="108" Height="23" Background="#FFE43E3E" BorderBrush="#FF7C4949" BorderThickness="1"/>
+        <TextBlock Style="{StaticResource BaseTextBlockStyle}" Text="Age :" HorizontalAlignment="Left" Margin="56,405,0,0" VerticalAlignment="Top" FontSize="15"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="156,400,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="108"/>
+        <TextBlock Style="{StaticResource BaseTextBlockStyle}" Text="Gender :" HorizontalAlignment="Left" Margin="319,404,0,0" VerticalAlignment="Top" FontSize="15"/>
+        <ComboBox HorizontalAlignment="Left" Margin="453,400,0,0" VerticalAlignment="Top" Width="102"/>
+        <TextBlock Style="{StaticResource BaseTextBlockStyle}" Text="Profession :" HorizontalAlignment="Left" Margin="56,482,0,0" VerticalAlignment="Top" FontSize="15"/>
+        <ComboBox HorizontalAlignment="Left" Margin="156,482,0,0" VerticalAlignment="Top" Width="108"/>
+        <TextBlock Style="{StaticResource BaseTextBlockStyle}" Text="Nationality :" HorizontalAlignment="Left" Margin="56,560,0,0" VerticalAlignment="Top" FontSize="15"/>
+        <ComboBox HorizontalAlignment="Left" Margin="156,559,0,0" VerticalAlignment="Top" Width="108"/>
+        <TextBlock Style="{StaticResource BaseTextBlockStyle}" Text="Location :" HorizontalAlignment="Left" Margin="319,488,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.186,0.4" FontSize="15"/>
+        <ComboBox HorizontalAlignment="Left" Margin="453,482,0,0" VerticalAlignment="Top" Width="102"/>
+        <TextBlock Style="{StaticResource BaseTextBlockStyle}" Text="Activities on PC :" HorizontalAlignment="Left" Margin="319,565,0,0" VerticalAlignment="Top" FontSize="15"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="453,559,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102"/>
+        <Button Content="Save" Background="Green" HorizontalAlignment="Left" Margin="545,612,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.397,-0.364" />
 
     </Grid>
 </Page>

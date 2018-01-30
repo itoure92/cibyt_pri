@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:cibyt_pri"
       mc:Ignorable="d" 
-      d:DesignHeight="700" d:DesignWidth="700"
+      d:DesignHeight="700" d:DesignWidth="705"
       Title="LoginPage">
 
 	<StackPanel>
@@ -37,7 +37,7 @@
 					<ColumnDefinition Width="*" />
 				</Grid.ColumnDefinitions>
 				<Image Grid.Column="0" Source="/Images/user_icon.png" Width="40" Height="40" />
-				<TextBox Style="{StaticResource Credentials}" Grid.Column="1"/>
+				<TextBox Name="login" Style="{StaticResource Credentials}" Grid.Column="1"/>
 			</Grid>
 		</Grid>
 
@@ -58,7 +58,7 @@
 					<ColumnDefinition Width="*" />
 				</Grid.ColumnDefinitions>
 				<Image Grid.Column="0" Source="/Images/password_icon.png" Width="40" Height="40" />
-				<PasswordBox Style="{StaticResource CredentialsPass}" Grid.Column="1"/>
+				<PasswordBox Name="password" Style="{StaticResource CredentialsPass}" Grid.Column="1"/>
 			</Grid>
 		</Grid>
 
@@ -66,12 +66,12 @@
 				Margin="0,10,0,0" 
 				Name="sign_in"
 				Width="150" 
-				Height="40">
+				Height="40" Click="sign_in_Click">
 			<TextBlock Style="{StaticResource ButtonText}">SIGN IN</TextBlock>
 		</Button>
 
 		<TextBlock HorizontalAlignment="Center" Margin="20,20,20,10">
-			<Hyperlink Foreground="Red">Forgot your password?</Hyperlink>
+			<Hyperlink Foreground="Red" Click="Forget_password_Click">Forgot your password?</Hyperlink>
 		</TextBlock>
 
 		<Grid Margin="0,0,0,0">
@@ -107,7 +107,7 @@
 				Margin="0,10,0,0" 
 				Name="sign_up"
 				Width="190" 
-				Height="40">
+				Height="40" Click="sign_up_Click">
 			<TextBlock Style="{StaticResource ButtonText}">NEW ACCOUNT</TextBlock>
 		</Button>
 	</StackPanel>
