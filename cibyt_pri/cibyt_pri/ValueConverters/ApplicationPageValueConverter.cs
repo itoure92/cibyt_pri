@@ -1,4 +1,6 @@
-﻿using System;
+﻿using cibyt_pri.DataModel;
+using cibyt_pri.Pages;
+using System;
 using System.Diagnostics;
 using System.Globalization;
 
@@ -12,11 +14,27 @@ namespace cibyt_pri
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             // Find the appropriate page
-            switch ((ApplicationPage)value)
+            //ApplicationPage page = (ApplicationPage)value;
+            switch ((PageType)value)
             {
-                case ApplicationPage.Login:
+                case PageType.Login:
+                    ((MainWindow)WindowViewModel.GetWindow()).setVisibilitySt_panel(false);
                     return new LoginPage();
-
+                case PageType.HomePage:
+                   ((MainWindow)WindowViewModel.GetWindow()).setVisibilitySt_panel(true);
+                    return new HomePage();
+                case PageType.GameSettingPage:
+                    ((MainWindow)WindowViewModel.GetWindow()).setVisibilitySt_panel(true);
+                    return new GameSettingPage();
+                case PageType.ProfilSettingPage:
+                    ((MainWindow)WindowViewModel.GetWindow()).setVisibilitySt_panel(true);
+                    return new ProfileSettingPage();
+                case PageType.NewUser:
+                    ((MainWindow)WindowViewModel.GetWindow()).setVisibilitySt_panel(false);
+                    return new NewUserPage();
+                case PageType.ForgetPasswordPage:
+                    ((MainWindow)WindowViewModel.GetWindow()).setVisibilitySt_panel(false);
+                    return new ForgetPasswordPage();
                 default:
                     Debugger.Break();
                     return null;
