@@ -1,4 +1,5 @@
-﻿using System;
+﻿using cibyt_pri.DataModel;
+using System;
 using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Input;
@@ -14,7 +15,7 @@ namespace cibyt_pri
         /// <summary>
         /// The window this view model controls
         /// </summary>
-        private Window mWindow;
+        private static Window mWindow;
 
         /// <summary>
         /// The margin around the window to allow for a drop shadow
@@ -83,10 +84,18 @@ namespace cibyt_pri
         /// </summary>
         public GridLength TitleHeightGridLength { get { return new GridLength(TitleHeight + ResizeBorder); } }
 
+
         /// <summary>
         /// The curent page of the application
         /// </summary>
-        public ApplicationPage CurrentPage { get; set; } = ApplicationPage.Login;
+        //private ApplicationPage currentPage1 = new ApplicationPage(mWindow, PageType.Login);
+
+        /// <summary>
+        /// The curent page of the application
+        /// </summary>
+        public PageType CurrentPage { get; set; } = PageType.Login;
+
+        public static Window GetWindow() => mWindow;
 
         #endregion
 
