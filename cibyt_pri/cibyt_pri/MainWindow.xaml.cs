@@ -1,4 +1,5 @@
-﻿using cibyt_pri.Pages;
+﻿using cibyt_pri.DataModel;
+using cibyt_pri.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,15 @@ namespace cibyt_pri
         {
             InitializeComponent();
             this.DataContext = new WindowViewModel(this);
+            this.st_panel.Visibility = Visibility.Hidden;
+        }
+
+        public void setVisibilitySt_panel(Boolean t)
+        {
+            if (t == true)
+                st_panel.Visibility = Visibility.Visible;
+            else
+                st_panel.Visibility = Visibility.Hidden;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -48,20 +58,25 @@ namespace cibyt_pri
 
         private void Home_Button_Click(object sender, RoutedEventArgs e)
         {
-            ((WindowViewModel)this.DataContext).CurrentPage = ApplicationPage.HomePage;
+            ((WindowViewModel)this.DataContext).CurrentPage = PageType.HomePage;
             ((WindowViewModel)DataContext).OnPropertyChanged("CurrentPage");
         }
 
         private void Profile_setting_Button_Click(object sender, RoutedEventArgs e)
         {
-            ((WindowViewModel)this.DataContext).CurrentPage = ApplicationPage.ProfilSettingPage;
+            ((WindowViewModel)this.DataContext).CurrentPage = PageType.ProfilSettingPage;
             ((WindowViewModel)DataContext).OnPropertyChanged("CurrentPage");
         }
 
         private void Game_setting_Click_1(object sender, RoutedEventArgs e)
         {
-            ((WindowViewModel)this.DataContext).CurrentPage = ApplicationPage.GameSettingPage;
+            ((WindowViewModel)this.DataContext).CurrentPage = PageType.GameSettingPage;
             ((WindowViewModel)DataContext).OnPropertyChanged("CurrentPage");
+        }
+
+        private void News_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

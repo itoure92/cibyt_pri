@@ -13,10 +13,10 @@
         Title="CyBit" Height="700" Width="700">
 	<Window.Resources>
 		<Storyboard x:Key="sbShowLeftMenu" >
-			<ThicknessAnimation Storyboard.TargetProperty="Margin" From="-100,0,0,0" To="0,0,0,0" DecelerationRatio=".9" Duration="0:0:1" />
+			<ThicknessAnimation Storyboard.TargetProperty="Margin" From="-115,54,0,0" To="0,54,0,0" DecelerationRatio=".9" Duration="0:0:1" />
 		</Storyboard>
 		<Storyboard x:Key="sbHideLeftMenu">
-			<ThicknessAnimation Storyboard.TargetProperty="Margin" From="0,0,0,0" To="-100,0,0,0" AccelerationRatio=".9" Duration="0:0:1" />
+			<ThicknessAnimation Storyboard.TargetProperty="Margin" From="0,54,0,0" To="-115,54,0,0" AccelerationRatio=".9" Duration="0:0:1" />
 		</Storyboard>
 		<Style TargetType="{x:Type local:MainWindow}">
 			<Setter Property="Template">
@@ -101,37 +101,32 @@
 		</Style>
 	</Window.Resources>
 
-	<WindowChrome.WindowChrome>
-		<WindowChrome 
+    <WindowChrome.WindowChrome>
+        <WindowChrome 
 			ResizeBorderThickness="{Binding ResizeBorder}"
 			CaptionHeight="{Binding TitleHeight}"
 			GlassFrameThickness="0"
 			/>
-	</WindowChrome.WindowChrome>
+    </WindowChrome.WindowChrome>
 
-	<Grid Background="{StaticResource BGWindowColorBrush}">
+    <Grid Background="{StaticResource BGWindowColorBrush}">
 		<Frame x:Name="Main" Content="{Binding CurrentPage, Converter={local:ApplicationPageValueConverter}}"/>
-		<Canvas>
-			<!--<Frame Background="{StaticResource background}" Name="Main" Height="321" Canvas.Left="50" Width="468" NavigationUIVisibility="Hidden"/>-->
-			<StackPanel Name="st_panel" Background="{StaticResource background}" Width="150" Margin="-100,0,0,0">
-                <DockPanel VerticalAlignment="Center" HorizontalAlignment="Right" Width="150" Height="50">
+        <Canvas>
+            <StackPanel Name="st_panel" Background="{StaticResource background}" Width="160" Margin="-115,54,0,0">
+                <DockPanel VerticalAlignment="Center" HorizontalAlignment="Right" Width="160" Height="50">
                     <Button Background="{StaticResource background}" Content="{StaticResource list_icon}" Width="30" Height="35" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="14,10,10,10" Click="Button_Click" BorderThickness="0"/>
                 </DockPanel>
-                <DockPanel VerticalAlignment="Center" HorizontalAlignment="Right" Width="150" Height="50">
-                    <Label Width="100" Content="Home" VerticalAlignment="Center" FontFamily="Segoe UI Semibold" FontSize="18" FontWeight="Bold" />
-                    <Button Background="{StaticResource background}" Content="{StaticResource home_icon}" Width="28" Height="35" VerticalAlignment="Top" Margin="14,7,10,0" HorizontalAlignment="Right" BorderThickness="0" Click="Home_Button_Click"/>
+                <DockPanel VerticalAlignment="Center" HorizontalAlignment="Right" Width="160" Height="50">
+                    <Button Background="{StaticResource background}" Content="{StaticResource dkButton_home}" Click="Home_Button_Click"/>
                 </DockPanel>
-                <DockPanel VerticalAlignment="Center" HorizontalAlignment="Right" Width="150" Height="50">
-                    <Label Width="100" Content="News" VerticalAlignment="Center" FontFamily="Segoe UI Semibold" FontSize="18" FontWeight="Bold" />
-                    <Button Background="{StaticResource background}" Content="{StaticResource news_icon}" Width="28" Height="35" VerticalAlignment="Center" Margin="14,10,10,10" HorizontalAlignment="Right" BorderThickness="0"/>
+                <DockPanel VerticalAlignment="Center" HorizontalAlignment="Right" Width="160" Height="50">
+                    <Button Background="{StaticResource background}" Content="{StaticResource dkButton_news}" Click="News_Click"/>
                 </DockPanel>
-                <DockPanel VerticalAlignment="Center" HorizontalAlignment="Right" Width="150" Height="50">
-                    <Label Width="100" Content="Account" VerticalAlignment="Center" FontFamily="Segoe UI Semibold" FontSize="18" FontWeight="Bold" />
-                    <Button Background="{StaticResource background}" Content="{StaticResource account_icon}" Width="28" Height="35" VerticalAlignment="Center" Margin="14,10,10,10" HorizontalAlignment="Right" BorderThickness="0" Click="Profile_setting_Button_Click"/>
+                <DockPanel VerticalAlignment="Center" HorizontalAlignment="Right" Width="160" Height="50">
+                    <Button Background="{StaticResource background}" Content="{StaticResource dkButton_profile_set}" Click="Profile_setting_Button_Click"/>
                 </DockPanel>
-                <DockPanel VerticalAlignment="Center" HorizontalAlignment="Right" Width="150" Height="50">
-                    <Label Width="100" Content="Settings" VerticalAlignment="Center" FontFamily="Segoe UI Semibold" FontSize="18" FontWeight="Bold" />
-                    <Button Background="{StaticResource background}" Content="{StaticResource setting_icon}" Width="28" Height="35" VerticalAlignment="Center" Margin="14,10,10,10" HorizontalAlignment="Right" BorderThickness="0" Click="Game_setting_Click_1" />
+                <DockPanel VerticalAlignment="Center" HorizontalAlignment="Right" Width="160" Height="50">
+                    <Button Background="{StaticResource background}" Content="{StaticResource dkButton_game_set}" Click="Game_setting_Click_1" />
                 </DockPanel>
             </StackPanel>
         </Canvas>
