@@ -7,33 +7,58 @@
 		<ResourceDictionary Source="Fonts.xaml" />
 	</ResourceDictionary.MergedDictionaries>
     <!-- Buttons for the Game Setting -->
-    <Border x:Key="stPanel_browser" CornerRadius="5" Background="#00FF00">
+    <Border x:Key="stPanel_browser" CornerRadius="5" Background="#00FF00" Width="182" Height="76">
         <StackPanel Orientation="Horizontal" >
-            <TextBlock Text="Browser" VerticalAlignment="Center" Margin="5,0,0,0" FontWeight="Bold"/>
+            <TextBlock Text="Browser" VerticalAlignment="Center" Margin="5,0,0,0" FontWeight="Bold" FontSize="20"/>
             <Image Source="../Images/Icons/icons8-globe-50.png" Width="40" Height="40" Margin="20,0,0,0"/>
         </StackPanel>
     </Border>
 
-    <Border x:Key="stPanel_antivirus" CornerRadius="5" Background="#CC00CC">
+    <Border x:Key="stPanel_antivirus" CornerRadius="5" Background="#CC00CC" Width="182" Height="76">
         <StackPanel Orientation="Horizontal">
-            <TextBlock Text="Antivirus" VerticalAlignment="Center" Margin="5,0,0,0" FontWeight="Bold"/>
+            <TextBlock Text="Antivirus" VerticalAlignment="Center" Margin="5,0,0,0" FontWeight="Bold" FontSize="20"/>
             <Image Source="../Images/Icons/icons8-antivirus-50.png" Width="40" Height="40" Margin="20,0,0,0"/>
         </StackPanel>
     </Border>
-    <Border x:Key="stPanel_mail" CornerRadius="5" Background="#0000CC">
+    <Border x:Key="stPanel_mail" CornerRadius="5" Background="#0000CC" Width="182" Height="76">
         <StackPanel Orientation="Horizontal">
-            <TextBlock Text="Mail App" VerticalAlignment="Center" Margin="5,0,0,0" FontWeight="Bold"/>
+            <TextBlock Text="Mail App" VerticalAlignment="Center" Margin="5,0,0,0" FontWeight="Bold" FontSize="20"/>
             <Image Source="../Images/Icons/icons8-mailbox-50.png" Width="40" Height="40" Margin="20,0,0,0"/>
         </StackPanel>
     </Border>
-    <Border x:Key="stPanel_search" CornerRadius="5" Background="#CC6600">
-            <StackPanel Orientation="Horizontal">
-            <TextBlock Text="Search Engine" VerticalAlignment="Center" Margin="5,0,0,0" FontWeight="Bold"/>
+    <Border x:Key="stPanel_search" CornerRadius="5" Background="#CC6600" Width="182" Height="76">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Search Engine" VerticalAlignment="Center" Margin="5,0,0,0" FontWeight="Bold" FontSize="20"/>
             <Image Source="../Images/Icons/icons8-search-50.png" Width="40" Height="40"/>
         </StackPanel>
     </Border>
+    
+    <Border x:Key="dkButton_home" Width="160" Height="50" Background="{StaticResource background}">  
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Home" VerticalAlignment="Center" Margin="35,10,10,10" FontFamily="Segoe UI Semibold" FontWeight="Bold" FontSize="16"/>
+            <Image Source="../Images/Icons/ic_home_white_24dp.png" Margin="33,10,10,10" Width="28" Height="35"/>
+        </StackPanel>
+    </Border>
+    <Border x:Key="dkButton_news" Width="160" Height="50" Background="{StaticResource background}">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="News" VerticalAlignment="Center" Margin="35,10,10,10" FontFamily="Segoe UI Semibold" FontWeight="Bold" FontSize="16"/>
+            <Image Source="../Images/Icons/ic_library_books_white_24dp.png" Margin="35,10,10,10" Width="28" Height="35"/>
+        </StackPanel>
+    </Border>
+    <Border x:Key="dkButton_profile_set" Width="160" Height="50" Background="{StaticResource background}">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Profile Setting" VerticalAlignment="Center" Margin="0,10,10,10" FontFamily="Segoe UI Semibold" FontWeight="Bold" FontSize="16"/>
+            <Image Source="../Images/Icons/ic_account_circle_white_24dp.png" Margin="7,10,10,10" Width="28" Height="35"/>
+        </StackPanel>
+    </Border>
+    <Border x:Key="dkButton_game_set" Width="160" Height="50" Background="{StaticResource background}">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Game Setting" VerticalAlignment="Center" Margin="1,10,10,10" FontFamily="Segoe UI Semibold" FontWeight="Bold" FontSize="16"/>
+            <Image Source="../Images/Icons/ic_settings_white_24dp.png" Margin="10,10,10,10" Width="28" Height="35"/>
+        </StackPanel>
+    </Border>
 
-	<!-- Hoverless button -->
+    <!-- Hoverless button -->
 	<Style TargetType="{x:Type Button}" x:Key="Hoverless">
 		<Setter Property="Background" Value="Transparent" />
 		<Setter Property="BorderThickness" Value="0" />

@@ -22,10 +22,13 @@
     
     <Color x:Key="home_col">#990099</Color>
     <SolidColorBrush x:Key="home_color" Color="{StaticResource home_col}" />
-
+    
     <Color x:Key="profile_setting">#FF3300</Color>
     <SolidColorBrush x:Key="profile_setting_color" Color="{StaticResource profile_setting}" Opacity="0.44"/>
 
+    <Color x:Key="new_user">#00FF00</Color>
+    <SolidColorBrush x:Key="new_user_color" Color="{StaticResource new_user}" Opacity="0.44"/>
+    
     <Color x:Key="game_setting">#FF3300</Color>
 	<SolidColorBrush x:Key="game_setting_color" Color="{StaticResource game_setting}" Opacity="0.44"/>
 
