@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\moura\CyBit\cibyt_pri\cibyt_pri\cibyt_pri\obj\Debug\
+C:\Users\moura\Desktop\PRI\cibyt_pri\cibyt_pri\cibyt_pri\obj\Debug\
 cibyt_pri
 none
 false
 DEBUG;TRACE
-C:\Users\moura\CyBit\cibyt_pri\cibyt_pri\cibyt_pri\App.xaml
-111194725721
+C:\Users\moura\Desktop\PRI\cibyt_pri\cibyt_pri\cibyt_pri\App.xaml
+132130865639
 
-19-746994704
-16820888323
-Pages\GameSettingPage.xaml;Pages\HomePage.xaml;MainWindow.xaml;Pages\LoginPage.xaml;Pages\ProfileSettingPage.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;Styles\Images.xaml;Styles\Texts.xaml;Styles\Windows.xaml;
+22-2143233415
+16912821645
+Pages\ForgetPasswordPage.xaml;Pages\GameSettingPage.xaml;Pages\HomePage.xaml;MainWindow.xaml;Pages\LoginPage.xaml;Pages\NewUserPage.xaml;Pages\ProfileSettingPage.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;Styles\Images.xaml;Styles\Texts.xaml;Styles\Windows.xaml;
 
-False
+True
 
