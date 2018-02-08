@@ -37,6 +37,7 @@
         <ComboBox HorizontalAlignment="Left" Margin="482,447,0,0" VerticalAlignment="Top" Width="167"/>
         <TextBlock Style="{StaticResource BaseTextBlockStyle}" Text="Activities on PC :" HorizontalAlignment="Left" Margin="365,527,0,0" VerticalAlignment="Top" FontSize="20"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="520,527,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129"/>
+        <Button Content="Cancel" Background="Green" HorizontalAlignment="Left" Margin="285,594,0,0" VerticalAlignment="Top" Width="151" RenderTransformOrigin="0.397,-0.364" FontSize="20" Height="28" Click="cancel_Click"/>
         <Button Content="Create Account" Background="Green" HorizontalAlignment="Left" Margin="498,594,0,0" VerticalAlignment="Top" Width="151" RenderTransformOrigin="0.397,-0.364" FontSize="20" Height="28" Click="Create_Account_Click"/>
 
     </Grid>

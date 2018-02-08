@@ -76,7 +76,8 @@ namespace cibyt_pri
 
         private void News_Click(object sender, RoutedEventArgs e)
         {
-
+            ((WindowViewModel)this.DataContext).CurrentPage = PageType.NewsPage;
+            ((WindowViewModel)DataContext).OnPropertyChanged("CurrentPage");
         }
     }
 }

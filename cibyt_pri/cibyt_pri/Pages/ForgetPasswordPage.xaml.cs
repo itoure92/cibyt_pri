@@ -29,5 +29,11 @@ namespace cibyt_pri.Pages
         {
 
         }
+
+        private void cancel_Click(object sender, RoutedEventArgs e)
+        {
+            ((WindowViewModel)WindowViewModel.GetWindow().DataContext).CurrentPage = PageType.Login;
+            ((WindowViewModel)WindowViewModel.GetWindow().DataContext).OnPropertyChanged("CurrentPage");
+        }
     }
 }

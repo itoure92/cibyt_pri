@@ -14,5 +14,6 @@
         GameSettingPage = 3,
         NewUser = 4,
         ForgetPasswordPage = 5,
+        NewsPage = 6,
     }
 }
