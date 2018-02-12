@@ -36,7 +36,7 @@ namespace cibyt_pri
                     ((MainWindow)WindowViewModel.GetWindow()).setVisibilitySt_panel(false);
                     return new ForgetPasswordPage();
                 case PageType.NewsPage:
-                    ((MainWindow)WindowViewModel.GetWindow()).setVisibilitySt_panel(false);
+                    ((MainWindow)WindowViewModel.GetWindow()).setVisibilitySt_panel(true);
                     return new NewsPage();
                 default:
                     Debugger.Break();
